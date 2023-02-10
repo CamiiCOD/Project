@@ -1,0 +1,137 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #130e0c;
+  }
+
+.navbar {
+    border-radius: 20px;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link:hover{
+    /*text-decoration: underline;           */
+    /*border-bottom: 2px solid green;   */
+}
+
+.nav-link::after{
+    content: '';
+    opacity: 0;
+    transition: all 0.5s;
+    height: 2px;
+    width: 100%;
+    background-color: greenyellow;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+}
+
+.nav-link:hover::after{
+    opacity: 1;
+}
+
+.logo-img  {
+    /* Por si luego agregan texto luego del logo en el navbar, para que quede alineado deben escribir las propiedades acá. */
+}
+
+.row {
+    margin-top: 10rem auto;
+}
+.card {  /* Propiedades de las (cartas) de las materias*/
+    width: 18rem;
+    transition: all 0.4s;
+     margin: 0 auto; 
+    float: none; 
+    margin-bottom: 3rem; 
+}
+
+.card:hover {
+    transform: scale(1.10);
+}
+
+.navbar-toggler {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    transition: 0.5 ease-in-out;
+}
+
+/* Sacar el borde del toggler del navbar  */
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none ;
+    border: 0;
+}
+
+.navbar-toggler span {
+    margin: 0;
+    padding: 0;
+}
+
+/* Las líneas del toggler */
+.toggler-icon{
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #ff0000;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+}
+
+/* El espacio entre cada línea del toggler */
+.middle-bar{
+    margin-top: 0px;
+}
+
+/* Cuando es clickeado */
+.navbar-toggler .top-bar {
+    margin-top: 0px;
+    transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    margin-top: 0px;
+    transform: rotate(-135deg);
+}
+/* Estado cuando el navbar está colapsado */
+
+.navbar-toggler.collapsed .top-bar {
+    margin-top: -20px;
+    transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    margin-top: 20px;
+    transform: rotate(0deg);
+}
+
+/* color de las 3 líneas tkm CSS Gradient*/
+.navbar-toggler.collapsed .toggler-icon {
+    background: rgb(86,0,228);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(2, 253, 23, 0.582) 100%);
+}
+
+
+
+
+
